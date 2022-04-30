@@ -58,3 +58,14 @@ You can assume that you are only given numbers.
 You cannot assume the size of the array.
 You can assume that you do get an array and if the array is empty, return 0.
 */
+
+// Sum Numbers
+function sum (numbers) {
+  let sum = 0; 
+  for(let i = 0; i < numbers.length; i++){
+    sum += numbers[i];
+  }
+  return sum;
+    
+    
+};
