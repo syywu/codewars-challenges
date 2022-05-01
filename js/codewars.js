@@ -256,3 +256,10 @@ time = 6.7---> litres = 3
 
 time = 11.8--> litres = 5
 */
+
+function litres(time) {
+  //   round down time to the smaller val
+   let res = time * 0.5; 
+    return Math.floor(res);
+  
+  }
