@@ -258,8 +258,8 @@ time = 11.8--> litres = 5
 */
 
 function litres(time) {
-  //   round down time to the smaller val
    let res = time * 0.5; 
+  //  round down the litres
     return Math.floor(res);
   
   }
