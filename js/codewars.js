@@ -233,3 +233,8 @@ Sam Harris => S.H
 
 patrick feeney => P.F
 */
+
+function abbrevName(name){
+  let str = name.toUpperCase().split(' ');
+  return str[0][0] + "." + str[1][0];
+}
