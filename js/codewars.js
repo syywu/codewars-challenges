@@ -105,5 +105,6 @@ Examples:
 */
 
 function opposite(num){
+  // any numbers * -1 will return the opposite
   return num * -1;
 }
