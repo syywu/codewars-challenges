@@ -215,3 +215,7 @@ function booleanToString(b){
   }
   return "false"
 }
+
+function booleanToString(b){
+  return b ? 'true' : 'false';
+}
