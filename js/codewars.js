@@ -103,3 +103,7 @@ Examples:
 14: -14
 -34: 34
 */
+
+function opposite(num){
+  return num * -1;
+}
