@@ -428,6 +428,18 @@ Note:
 Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
 */
 
+function betterThanAverage(classPoints, yourPoints) {
+  let average = yourPoints; 
+  for(let i =0; i < classPoints.length; i++){
+    average += classPoints[i];
+    let res = average / classPoints.length;
+    if(yourPoints < res){
+      return false
+    }
+  }
+  return true
+}
+
 // String ends with?
 
 /*
