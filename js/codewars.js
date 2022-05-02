@@ -407,6 +407,15 @@ Names given are always valid strings.
 
 */
 
+function areYouPlayingBanjo(name) {
+  let arr = name.toLowerCase().split('');
+  if(arr[0] !== 'r'){
+    return name + " does not play banjo"
+}
+    return name + " plays banjo" 
+  }
+  
+
 // String ends with?
 
 /*
