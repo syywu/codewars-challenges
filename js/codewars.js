@@ -353,6 +353,17 @@ function numberToString(num) {
   return num.toString();
 }
 
+/* Lost without map
+
+Given an array of integers, return a new array with each value doubled.
+
+For example:
+
+[1, 2, 3] --> [2, 4, 6]
+
+*/
+
+
 /* Sentence Smash
 
 Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
