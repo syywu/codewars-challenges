@@ -381,6 +381,18 @@ Example
 ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 */
 
+function smash (words) {
+  let str = '';
+  for(let i =0; i<words.length; i++){
+    if(words.length <= 1){
+       return words[i];
+    }
+    str += " " + words[i];
+      
+  }
+  return str.trim(); 
+};
+
 
 
 // String ends with?
