@@ -432,10 +432,10 @@ function betterThanAverage(classPoints, yourPoints) {
   let average = yourPoints; 
   for(let i =0; i < classPoints.length; i++){
     average += classPoints[i];
-    let res = average / classPoints.length;
-    if(yourPoints < res){
-      return false
-    }
+  }
+  let res = average / classPoints.length +1;
+  if(yourPoints < res){
+    return false
   }
   return true
 }
