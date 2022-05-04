@@ -532,6 +532,12 @@ function rentalCarCost(d){
     return total;
 }
 
+// Make Upper Case
+
+function makeUpperCase(str){
+    return str.toUpperCase();
+}
+
 // String ends with?
 
 /*
