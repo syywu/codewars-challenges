@@ -545,6 +545,14 @@ Given a non-empty array of integers, return the result of multiplying the values
 [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 */
 
+function grow(x){
+  let res = 1;
+  for(let i = 0; i < x.length; i++){
+    res *= x[i]
+  }
+  return res
+}
+
 // String ends with?
 
 /*
