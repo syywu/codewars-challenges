@@ -586,3 +586,15 @@ Example:
 348597 => [7,9,5,8,4,3]
 0 => [0]
  */
+
+function digitize(n) {
+  //   initialise an empty array
+    let num =(n).toString(10).split("").map(Number);
+    let arr = []
+    //   reverse the number using for loop 
+    // push the index to the array
+    for(let i = num.length -1; i >= 0; i--){
+      arr.push(num[i]);
+    }
+    return arr;
+  }
