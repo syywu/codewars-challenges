@@ -640,3 +640,5 @@ function setAlarm(employed, vacation){
     } 
     return true;
   }
+
+  const setAlarm = (employed, vacation) => employed && !vacation;
