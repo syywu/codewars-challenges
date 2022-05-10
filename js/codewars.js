@@ -752,3 +752,14 @@ function removeChar(str){
      return arr.join('')
   };
   
+  function removeChar(str){
+
+     var input_str = str;
+     var output_str = '';
+     
+     for (var i = 1; i < input_str.length-1; i++) {
+       output_str += input_str[i];
+     }
+   
+     return output_str;
+   };
