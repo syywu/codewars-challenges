@@ -710,7 +710,9 @@ function DNAtoRNA(dna) {
      if(dna[i]=="T") {
         newStr+="U"
 }
-else{newStr+=dna[i]}
+else{
+  newStr+=dna[i]
+}
 }
 return newStr;
       
@@ -737,3 +739,8 @@ function makeNegative(num) {
 function makeNegative(num) {
   return num <= 0 ? num : num*-1;
 }
+
+/* Remove First and Last Character
+
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+*/
