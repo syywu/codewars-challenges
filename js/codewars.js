@@ -594,6 +594,26 @@ function solution(str, ending){
 return false
 }
 
+function solution(str, ending){
+  let strArr = str.split("");
+  let endArr = ending.split("");
+  let totalArrayLength = strArr.length - endArr.length;
+  let newArr = [];
+
+  for (let i = totalArrayLength; i < strArr.length; i++) {
+    newArr.push(strArr[i]);
+  } 
+
+  let newEnding = endArr.join();
+  let newString = newArr.join();
+
+  if (newString == newEnding) {
+      return true;
+  } else {
+      return false;
+  }
+}
+
 function digitize(n) {
   //   initialise an empty array
     let num =(n).toString(10).split("").map(Number);
