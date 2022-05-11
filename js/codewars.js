@@ -587,6 +587,13 @@ Example:
 0 => [0]
  */
 
+function solution(str, ending){
+  if(str.endsWith(ending)){
+ return true
+}
+return false
+}
+
 function digitize(n) {
   //   initialise an empty array
     let num =(n).toString(10).split("").map(Number);
