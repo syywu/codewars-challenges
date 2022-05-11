@@ -595,23 +595,15 @@ return false
 }
 
 function solution(str, ending){
-  let strArr = str.split("");
-  let endArr = ending.split("");
-  let totalArrayLength = strArr.length - endArr.length;
-  let newArr = [];
-
-  for (let i = totalArrayLength; i < strArr.length; i++) {
-    newArr.push(strArr[i]);
-  } 
-
-  let newEnding = endArr.join();
-  let newString = newArr.join();
-
-  if (newString == newEnding) {
-      return true;
-  } else {
-      return false;
+  let newstr = ''
+  let count = str.length - ending.length
+  for(let i = count; i <str.length; i++){
+    newstr+=str[i]
   }
+  if(newstr === ending){
+    return true
+  }
+  return false
 }
 
 function digitize(n) {
