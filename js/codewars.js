@@ -865,9 +865,13 @@ area_or_perimeter(3, 3) --> 9
 Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
  */
 
-const areaOrPerimeter = function(l , w) {
+let areaOrPerimeter = function(l , w) {
   if( l == w){
     return l * w
   }
   return l + l + w + w
+};
+
+const areaPerimeter = function(l , w) {
+  return l == w ? l*w : 2*(l + w)
 };
