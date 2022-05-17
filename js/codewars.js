@@ -10,34 +10,34 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 */
 function arrayDiff(a, b) {
-// Temporary array, containing all values from a, which are not contained in b
-let diffArray = [];
-// Looping over a
-for(let i = 0; i < a.length; i++) {
+  // Temporary array, containing all values from a, which are not contained in b
+  let diffArray = [];
+  // Looping over a
+  for (let i = 0; i < a.length; i++) {
     // Per default we say that b does not contain a
     let bContainsAValue = false;
     // Loop over b
-    for(let y = 0; y < b.length; y++) {
-        // If any value in b is the same as the current value from a, we set bContainsAValue to true
-        if(a[i] === b[y]) bContainsAValue = true;
+    for (let y = 0; y < b.length; y++) {
+      // If any value in b is the same as the current value from a, we set bContainsAValue to true
+      if (a[i] === b[y]) bContainsAValue = true;
     }
     // Now only if bContainsAValue is still false, meaning it does not contain the a value, we push this value into our temporary array
-    if(!bContainsAValue) diffArray.push(a[i]);
-}
-// In the end we return the temporary array
-return diffArray;
+    if (!bContainsAValue) diffArray.push(a[i]);
+  }
+  // In the end we return the temporary array
+  return diffArray;
 }
 
 function arrayDiff(a, b) {
-    let newArr = [];
-    for(let i = 0; i < a.length; i++){
-      let bValInA = false;
-      for(let j =0; j < b.length; j++){
-        if (a[i] === b[j]) bValInA = true;
-      }
-     if(!bValInA) newArr.push(a[i]);
+  let newArr = [];
+  for (let i = 0; i < a.length; i++) {
+    let bValInA = false;
+    for (let j = 0; j < b.length; j++) {
+      if (a[i] === b[j]) bValInA = true;
     }
-   return newArr;
+    if (!bValInA) newArr.push(a[i]);
+  }
+  return newArr;
 }
 
 /* 
@@ -60,15 +60,13 @@ You can assume that you do get an array and if the array is empty, return 0.
 */
 
 // Sum Numbers
-function sum (numbers) {
-  let sum = 0; 
-  for(let i = 0; i < numbers.length; i++){
+function sum(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
     sum += numbers[i];
   }
   return sum;
-    
-    
-};
+}
 
 // Find the smallest integer in the array
 
@@ -82,15 +80,15 @@ You can assume, for the purpose of this kata, that the supplied array will not b
 
 class SmallestIntegerFinder {
   findSmallestInt(args) {
-     let smallest = args[0]; 
-     for(let i = 1; i < args.length; i++){
-       if(smallest > args[i]){
-         smallest = args[i];     
-       }
-     }
-     return smallest;
-   }
- }
+    let smallest = args[0];
+    for (let i = 1; i < args.length; i++) {
+      if (smallest > args[i]) {
+        smallest = args[i];
+      }
+    }
+    return smallest;
+  }
+}
 
 //  Opposite number
 
@@ -104,7 +102,7 @@ Examples:
 -34: 34
 */
 
-function opposite(num){
+function opposite(num) {
   // any numbers * -1 will return the opposite
   return num * -1;
 }
@@ -125,30 +123,32 @@ Examples(Operator, value1, value2) --> output
 
 */
 
-function basicOp(operation, value1, value2)
-{
-  switch (operation){
-      case '+':
-        return value1 + value2
-          break;
-      case '-':
-        return value1 - value2
-          break;
-      case '*':
-        return value1 * value2
-          break;
-      default:
-        return value1 / value2
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case "+":
+      return value1 + value2;
+      break;
+    case "-":
+      return value1 - value2;
+      break;
+    case "*":
+      return value1 * value2;
+      break;
+    default:
+      return value1 / value2;
   }
 }
 
-function basicOp(operation, value1, value2)
-{
-  switch(operation){
-    case '+': return value1 + value2;
-    case '*': return value1 * value2;
-    case '-': return value1 - value2;
-    case '/': return value1 / value2;
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case "+":
+      return value1 + value2;
+    case "*":
+      return value1 * value2;
+    case "-":
+      return value1 - value2;
+    case "/":
+      return value1 / value2;
   }
 }
 
@@ -165,10 +165,10 @@ You can assume that all values are integers. Do not mutate the input array/list.
 */
 
 function invert(array) {
-  for(let i=0; i<array.length; i++){
+  for (let i = 0; i < array.length; i++) {
     array[i] *= -1;
   }
-   return array;
+  return array;
 }
 
 // Counting sheep...
@@ -193,8 +193,8 @@ Hint: Don't forget to check for bad values like null/undefined
 function countSheeps(arrayOfSheep) {
   // TODO May the force be with you
   let count = 0;
-  for(let i = 0; i < arrayOfSheep.length; i++){
-    if(arrayOfSheep[i] === true){
+  for (let i = 0; i < arrayOfSheep.length; i++) {
+    if (arrayOfSheep[i] === true) {
       count++;
     }
   }
@@ -209,15 +209,15 @@ Implement a function which convert the given boolean value into its string repre
 Note: Only valid inputs will be given.
 */
 
-function booleanToString(b){
-  if(b){
-    return "true"
+function booleanToString(b) {
+  if (b) {
+    return "true";
   }
-  return "false"
+  return "false";
 }
 
-function booleanToString(b){
-  return b ? 'true' : 'false';
+function booleanToString(b) {
+  return b ? "true" : "false";
 }
 
 // Abbreviate a Two Word Name
@@ -234,8 +234,8 @@ Sam Harris => S.H
 patrick feeney => P.F
 */
 
-function abbrevName(name){
-  let str = name.toUpperCase().split(' ');
+function abbrevName(name) {
+  let str = name.toUpperCase().split(" ");
   return str[0][0] + "." + str[1][0];
 }
 
@@ -258,25 +258,23 @@ time = 11.8--> litres = 5
 */
 
 function litres(time) {
-   let res = time * 0.5; 
+  let res = time * 0.5;
   //  round down the litres
-    return Math.floor(res);
-  
-  }
+  return Math.floor(res);
+}
 
-  // Odd or Even
+// Odd or Even
 
-  /* 
+/* 
   Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
   */
 
-  function even_or_odd(number) {
-    if(number % 2 == 0){
-      return 'Even'
-    }
-    return "Odd"
-    
+function even_or_odd(number) {
+  if (number % 2 == 0) {
+    return "Even";
   }
+  return "Odd";
+}
 
 // Sum of positive
 
@@ -289,10 +287,10 @@ Note: if there is nothing to sum, the sum is default to 0.
 
   */
 
-function positiveSum(arr){
+function positiveSum(arr) {
   let addSum = 0;
-  for(let i =0; i< arr.length; i++){
-    if(arr[i] > 0){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
       addSum += arr[i];
     }
   }
@@ -315,11 +313,11 @@ summation(8) -> 36
 
 var summation = function (num) {
   let sum = 0;
-  for(let i = 0; i<=  num; i++){
-   sum += i
+  for (let i = 0; i <= num; i++) {
+    sum += i;
   }
-  return sum
-}
+  return sum;
+};
 
 /* If you can't sleep, just count sheep!!
 
@@ -328,13 +326,13 @@ Task:
 Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 */
 
-var countSheep = function (num){
-  let str = '';
-  for(let i = 1; i <= num; i++){
-      str += `${i} sheep...`
+var countSheep = function (num) {
+  let str = "";
+  for (let i = 1; i <= num; i++) {
+    str += `${i} sheep...`;
   }
   return str;
-}
+};
 
 /* num to str
 
@@ -363,14 +361,13 @@ For example:
 
 */
 
-function maps(x){
+function maps(x) {
   let newArr = [];
-  for(let i=0; i< x.length; i++){
-    newArr.push(x[i] * 2)
-  } 
-  return newArr
+  for (let i = 0; i < x.length; i++) {
+    newArr.push(x[i] * 2);
+  }
+  return newArr;
 }
-
 
 /* Sentence Smash
 
@@ -381,17 +378,16 @@ Example
 ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 */
 
-function smash (words) {
-  let str = '';
-  for(let i =0; i<words.length; i++){
-    if(words.length <= 1){
-       return words[i];
+function smash(words) {
+  let str = "";
+  for (let i = 0; i < words.length; i++) {
+    if (words.length <= 1) {
+      return words[i];
     }
     str += " " + words[i];
-      
   }
-  return str.trim(); 
-};
+  return str.trim();
+}
 
 /* Are You Playing Banjo?
 
@@ -408,13 +404,13 @@ Names given are always valid strings.
 */
 
 function areYouPlayingBanjo(name) {
-  let arr = name.toLowerCase().split('');
-  if(arr[0] !== 'r'){
-    return name + " does not play banjo"
-}
-    return name + " plays banjo" 
+  let arr = name.toLowerCase().split("");
+  if (arr[0] !== "r") {
+    return name + " does not play banjo";
   }
-  
+  return name + " plays banjo";
+}
+
 /* How good are you really?
 
 There was a test in your class and you passed it. Congratulations!
@@ -429,17 +425,16 @@ Your points are not included in the array of your class's points. For calculatin
 */
 
 function betterThanAverage(classPoints, yourPoints) {
-  let average = yourPoints; 
-  for(let i =0; i < classPoints.length; i++){
+  let average = yourPoints;
+  for (let i = 0; i < classPoints.length; i++) {
     average += classPoints[i];
   }
-  let res = average / classPoints.length +1;
-  if(yourPoints < res){
-    return false
+  let res = average / classPoints.length + 1;
+  if (yourPoints < res) {
+    return false;
   }
-  return true
+  return true;
 }
-
 
 /* Count by X
 
@@ -458,7 +453,7 @@ countBy(2,5) === [2,4,6,8,10]
 
 function countBy(x, n) {
   let z = [];
-  for(let i = 1; i <=n; i++){
+  for (let i = 1; i <= n; i++) {
     z.push(i * x);
   }
   return z;
@@ -477,11 +472,10 @@ n=-5, m=5:  0
 */
 
 function paperwork(n, m) {
-  if (n > 0 && m > 0){
-    return n * m 
+  if (n > 0 && m > 0) {
+    return n * m;
   }
-  return 0; 
-  
+  return 0;
 }
 
 /* Clock
@@ -501,12 +495,11 @@ Input constraints:
 0 <= s <= 59
  */
 
-function past(h, m, s){
+function past(h, m, s) {
   let hour = 3600000;
   let minute = 60000;
   let second = 1000;
-  return h*hour + m*minute + s*second;
-  
+  return h * hour + m * minute + s * second;
 }
 
 /* Transportation on vacation
@@ -521,21 +514,20 @@ Write a code that gives out the total amount for different days(d).
 
 */
 
-function rentalCarCost(d){
-    let total = 40 * d;
-    if(d >= 10){
-      total -= 50;
-    }
-    else if(d >=3){
-      total -=20;
-    }
-    return total;
+function rentalCarCost(d) {
+  let total = 40 * d;
+  if (d >= 10) {
+    total -= 50;
+  } else if (d >= 3) {
+    total -= 20;
+  }
+  return total;
 }
 
 // Make Upper Case
 
-function makeUpperCase(str){
-    return str.toUpperCase();
+function makeUpperCase(str) {
+  return str.toUpperCase();
 }
 
 /*  Reduce but Grow
@@ -545,12 +537,12 @@ Given a non-empty array of integers, return the result of multiplying the values
 [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 */
 
-function grow(x){
+function grow(x) {
   let res = 1;
-  for(let i = 0; i < x.length; i++){
-    res *= x[i]
+  for (let i = 0; i < x.length; i++) {
+    res *= x[i];
   }
-  return res
+  return res;
 }
 
 /* yes or no
@@ -558,11 +550,11 @@ function grow(x){
 Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 */
 
-function boolToWord( bool ){
-  if(bool == true){
-    return "Yes"
-  }else{
-     return "No"
+function boolToWord(bool) {
+  if (bool == true) {
+    return "Yes";
+  } else {
+    return "No";
   }
 }
 
@@ -587,38 +579,38 @@ Example:
 0 => [0]
  */
 
-function solution(str, ending){
-  if(str.endsWith(ending)){
- return true
-}
-return false
+function solution(str, ending) {
+  if (str.endsWith(ending)) {
+    return true;
+  }
+  return false;
 }
 
-function solution(str, ending){
-  let newstr = ''
-  let count = str.length - ending.length
-  for(let i = count; i <str.length; i++){
-    newstr+=str[i]
+function solution(str, ending) {
+  let newstr = "";
+  let count = str.length - ending.length;
+  for (let i = count; i < str.length; i++) {
+    newstr += str[i];
   }
-  if(newstr === ending){
-    return true
+  if (newstr === ending) {
+    return true;
   }
-  return false
+  return false;
 }
 
 function digitize(n) {
   //   initialise an empty array
-    let num =(n).toString(10).split("").map(Number);
-    let arr = []
-    //   reverse the number using for loop 
-    // push the index to the array
-    for(let i = num.length -1; i >= 0; i--){
-      arr.push(num[i]);
-    }
-    return arr;
+  let num = n.toString(10).split("").map(Number);
+  let arr = [];
+  //   reverse the number using for loop
+  // push the index to the array
+  for (let i = num.length - 1; i >= 0; i--) {
+    arr.push(num[i]);
   }
+  return arr;
+}
 
-  /*
+/*
   Rock Paper Scissors
 
 Let's play! You have to return which player won! In case of a draw return Draw!.
@@ -631,13 +623,20 @@ rps('paper','paper') // Draw!
   */
 
 const rps = (p1, p2) => {
-  if(p1 === "rock" && p2 === 'scissors' || p1 === 'scissors' && p2 === 'paper' || p1 === 'paper' && p2 === 'rock'){
-    return "Player 1 won!"
+  if (
+    (p1 === "rock" && p2 === "scissors") ||
+    (p1 === "scissors" && p2 === "paper") ||
+    (p1 === "paper" && p2 === "rock")
+  ) {
+    return "Player 1 won!";
+  } else if (
+    (p2 === "rock" && p1 === "scissors") ||
+    (p2 === "scissors" && p1 === "paper") ||
+    (p2 === "paper" && p1 === "rock")
+  ) {
+    return "Player 2 won!";
   }
-  else if(p2 === "rock" && p1 === 'scissors' || p2 === 'scissors' && p1 === 'paper' || p2 === 'paper' && p1 === 'rock'){
-      return 'Player 2 won!'
-    }
-    return "Draw!"
+  return "Draw!";
 };
 
 /* Set Alarm
@@ -652,17 +651,21 @@ setAlarm(false, false) -> false
 setAlarm(true, false) -> true
 */
 
-function setAlarm(employed, vacation){
+function setAlarm(employed, vacation) {
   //   return true when employed only
-    if(employed === false && vacation === true || employed === true && vacation === true || employed === false && vacation === false){
-      return false;
-    } 
-    return true;
+  if (
+    (employed === false && vacation === true) ||
+    (employed === true && vacation === true) ||
+    (employed === false && vacation === false)
+  ) {
+    return false;
   }
+  return true;
+}
 
-  const setAlarm = (employed, vacation) => employed && !vacation;
+const setAlarm = (employed, vacation) => employed && !vacation;
 
-  /*
+/*
   Double Char
 
 Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
@@ -679,21 +682,21 @@ function doubleChar(str) {
   //   new str
   //   iterate usinf for loop
   //   push i twice to str
-    let arr = str.split('')
-    let newStr = '';
-    for(let i =0; i<arr.length;i++){
-      newStr += arr[i].repeat(2).toString();
-    }
-    return newStr;
+  let arr = str.split("");
+  let newStr = "";
+  for (let i = 0; i < arr.length; i++) {
+    newStr += arr[i].repeat(2).toString();
   }
+  return newStr;
+}
 
-  function doubleChar(str) {
-    var word = '';
-    for (var i = 0; i < str.length; i++){
-      word += str[i] + str[i];
-    };
-    return word;
-  };
+function doubleChar(str) {
+  var word = "";
+  for (var i = 0; i < str.length; i++) {
+    word += str[i] + str[i];
+  }
+  return word;
+}
 
 /* DNA to RNA Conversion
 
@@ -713,28 +716,26 @@ The input string can be of arbitrary length - in particular, it may be empty. Al
 
 function DNAtoRNA(dna) {
   // create a function which returns an RNA sequence from the given DNA sequence
-//   iterate through- pushing non 'T' to an array
-  let arr = dna.split('');
-  for (let i = 0; i<arr.length; i++){
-    if(arr[i] === "T"){
+  //   iterate through- pushing non 'T' to an array
+  let arr = dna.split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "T") {
       arr.splice(i, 1, "U");
     }
   }
-  return arr.join('');
+  return arr.join("");
 }
 
 function DNAtoRNA(dna) {
-  var newStr = ''
-  for(var i =0;i<dna.length;i++) {
-     if(dna[i]=="T") {
-        newStr+="U"
-}
-else{
-  newStr+=dna[i]
-}
-}
-return newStr;
-      
+  var newStr = "";
+  for (var i = 0; i < dna.length; i++) {
+    if (dna[i] == "T") {
+      newStr += "U";
+    } else {
+      newStr += dna[i];
+    }
+  }
+  return newStr;
 }
 
 // Make negative
@@ -750,13 +751,13 @@ return newStr;
 // Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
 
 function makeNegative(num) {
-  if(num > 0){
-    return num * -1
+  if (num > 0) {
+    return num * -1;
   }
-  return num
+  return num;
 }
 function makeNegative(num) {
-  return num <= 0 ? num : num*-1;
+  return num <= 0 ? num : num * -1;
 }
 
 /* Remove First and Last Character
@@ -764,50 +765,48 @@ function makeNegative(num) {
 It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
 */
 
-function removeChar(str){
-  let arr = str.split('')
-        arr.shift(arr[0])
-     arr.pop();
-     return arr.join('')
-  };
-  
-  function removeChar(str){
+function removeChar(str) {
+  let arr = str.split("");
+  arr.shift(arr[0]);
+  arr.pop();
+  return arr.join("");
+}
 
-     var input_str = str;
-     var output_str = '';
-     
-     for (var i = 1; i < input_str.length-1; i++) {
-       output_str += input_str[i];
-     }
-   
-     return output_str;
-   };
+function removeChar(str) {
+  var input_str = str;
+  var output_str = "";
 
-   /** jenny
+  for (var i = 1; i < input_str.length - 1; i++) {
+    output_str += input_str[i];
+  }
+
+  return output_str;
+}
+
+/** jenny
     Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
 
 Can you help her?
     */
 
-function greet(name){
-  if(name === "Johnny") return "Hello, my love!";
+function greet(name) {
+  if (name === "Johnny") return "Hello, my love!";
   return "Hello, " + name + "!";
-  
 }
 
 // repeat str
 // repeat s by n times
 
-function repeatStr(n,s){
+function repeatStr(n, s) {
   return s.repeat(n);
 }
 
-function repeatStr(n,s){
- let str = ''
- for(let i= 0; i<n; i++){
-   str+=s
- }
- return str
+function repeatStr(n, s) {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    str += s;
+  }
+  return str;
 }
 
 /* Count of positives / sum of negatives
@@ -823,22 +822,21 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
  */
 
 function countPositivesSumNegatives(input) {
-
-  let arr = []
-  let count = 0
-  let sum= 0
-      if(input == null || input.length === 0){
-    return arr
-  }
-  for(let i=0; i<input.length; i++){
-     if(input[i] > 0){
-    count++
-  }else if(input[i] < 0){
-    sum+=input[i]
-  }
-  }
-   arr.push(count, sum)
+  let arr = [];
+  let count = 0;
+  let sum = 0;
+  if (input == null || input.length === 0) {
     return arr;
+  }
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] > 0) {
+      count++;
+    } else if (input[i] < 0) {
+      sum += input[i];
+    }
+  }
+  arr.push(count, sum);
+  return arr;
 }
 
 /* Reversed sequence
@@ -848,9 +846,9 @@ Build a function that returns an array of integers from n to 1 where n>0.
 Example : n=5 --> [5,4,3,2,1]
  */
 
-const reverseSeq = n => {
-  let arr =[]
-  for(let i = n; i > 0; i--){
+const reverseSeq = (n) => {
+  let arr = [];
+  for (let i = n; i > 0; i--) {
     arr.push(i);
   }
   return arr;
@@ -865,15 +863,15 @@ area_or_perimeter(3, 3) --> 9
 Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
  */
 
-let areaOrPerimeter = function(l , w) {
-  if( l == w){
-    return l * w
+let areaOrPerimeter = function (l, w) {
+  if (l == w) {
+    return l * w;
   }
-  return l + l + w + w
+  return l + l + w + w;
 };
 
-const areaPerimeter = function(l , w) {
-  return l == w ? l*w : 2*(l + w)
+const areaPerimeter = function (l, w) {
+  return l == w ? l * w : 2 * (l + w);
 };
 
 /* The highest profit wins
@@ -891,11 +889,11 @@ Remarks
 All arrays or lists will always have at least one element, so you don't need to check the length. Also, your function will always get an array or a list, you don't have to check for null, undefined or similar.
 */
 
-function minMax(arr){
-  arr.sort((a,b) => a-b);
-  let arr1 = []
-  arr1.push(arr[0], arr[arr.length -1])
-  return arr1; 
+function minMax(arr) {
+  arr.sort((a, b) => a - b);
+  let arr1 = [];
+  arr1.push(arr[0], arr[arr.length - 1]);
+  return arr1;
 }
 
 /* vowel count 
@@ -911,26 +909,32 @@ The input string will only consist of lower case letters and/or spaces.
 
 function getCount(str) {
   let vowelsCount = 0;
-  for(let i = 0; i< str.length; i++){
-    if(str[i]== 'a' ||str[i]== 'e' || str[i]== 'i' ||str[i]== 'o' ||str[i]== 'u'){
-       vowelsCount++
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str[i] == "a" ||
+      str[i] == "e" ||
+      str[i] == "i" ||
+      str[i] == "o" ||
+      str[i] == "u"
+    ) {
+      vowelsCount++;
     }
   }
-  
+
   return vowelsCount;
 }
 
 function getCount(str) {
   var vowelsCount = 0;
-  var vowels = ["a","e","i","o","u"];
-  for(var i = 0;i < str.length;i++){
-    for(var j=0;j<vowels.length;j++){
-      if(str[i] === vowels[j]){
+  var vowels = ["a", "e", "i", "o", "u"];
+  for (var i = 0; i < str.length; i++) {
+    for (var j = 0; j < vowels.length; j++) {
+      if (str[i] === vowels[j]) {
         vowelsCount++;
       }
     }
   }
-  
+
   return vowelsCount;
 }
 
@@ -942,6 +946,41 @@ Bob needs a fast way to calculate the volume of a cuboid with three values: the 
 
 class Kata {
   static getVolumeOfCuboid(length, width, height) {
-  return length * width * height
+    return length * width * height;
   }
 }
+
+/*
+Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+The binary number returned should be a string.
+
+Examples:(Input1, Input2 --> Output (explanation)))
+
+1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+*/
+
+function addBinary(a, b) {
+  // add numbers
+  // var c
+  let c = a + b;
+  // remainder when divide by 2
+  if (c % 2 === 0) {
+    return "1";
+  }
+  return "0";
+}
+/* highest and lowest
+
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+Examples
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+Notes
+All numbers are valid Int32, no need to validate them.
+There will always be at least one number in the input string.
+Output string must be two numbers separated by a single space, and highest number is first.
+ */
