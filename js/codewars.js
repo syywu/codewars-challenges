@@ -1117,3 +1117,7 @@ Examples
 26  =>  false
 
  */
+
+var isSquare = function (n) {
+  return Number.isInteger(Math.sqrt(n)) ? true : false;
+};
