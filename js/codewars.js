@@ -1233,5 +1233,15 @@ Example:
 
 None of the arrays will be empty, so you don't have to worry about that!
 
-
 */
+
+function removeEveryOther(arr) {
+  // remove every second element
+  //   loop through the arr
+  //   remove splice
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    newArr.push(arr[i]);
+  }
+  return newArr;
+}
