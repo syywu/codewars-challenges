@@ -1164,3 +1164,25 @@ function dontGiveMeFive(start, end) {
 // Examples
 // "This is an example!" ==> "sihT si na !elpmaxe"
 // "double  spaces"      ==> "elbuod  secaps"
+
+function reverseWords(str) {
+  //turn str into arr
+  //   split str word by word
+  // use for loop to reverse str and push it to new arr
+  //   converts arr back to str
+  let arr = str.split("");
+  let newStr = "";
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    newStr += arr[i];
+  }
+  let newArr = newStr.split(" ");
+  let finalStr = "";
+  let whitespace = " ";
+  for (let j = newArr.length - 1; j >= 0; j--) {
+    newArr[j] += whitespace;
+    finalStr += newArr[j];
+  }
+
+  return finalStr.trim();
+}
