@@ -1256,3 +1256,25 @@ function removeEveryOther(arr) {
 // XO("ooxXm") => true
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
+
+function XO(str) {
+  // convert str to lower case
+  //   convert str to arr
+  //   for loop
+  //   count
+  //   if length is same then return same
+  let arr = str.toLowerCase().split("");
+  let xCount = 0;
+  let oCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "o") {
+      oCount++;
+    } else if (arr[i] === "x") {
+      xCount++;
+    }
+  }
+  if (oCount === xCount) {
+    return true;
+  }
+  return false;
+}
