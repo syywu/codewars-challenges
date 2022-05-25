@@ -1279,8 +1279,37 @@ function XO(str) {
   return false;
 }
 
-/*
+/* BINGO or not
+
 For this game of BINGO, you will receive a single array of 10 numbers from 1 to 26 as an input. Duplicate numbers within the array are possible.
 
 Each number corresponds to their alphabetical order letter (e.g. 1 = A. 2 = B, etc). Write a function where you will win the game if your numbers can spell "BINGO". They do not need to be in the right order in the input array. Otherwise you will lose. Your outputs should be "WIN" or "LOSE" respectively.
 */
+
+function bingo(a) {
+  //   iterate through arr
+  // initiate count- if count > 1 return "WIN"
+  let bingoArr = [2, 7, 9, 14, 15];
+  let bCount = 0;
+  let iCount = 0;
+  let nCount = 0;
+  let gCount = 0;
+  let oCount = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === bingoArr[0]) {
+      bCount++;
+    } else if (a[i] === bingoArr[2]) {
+      gCount++;
+    } else if (a[i] === bingoArr[1]) {
+      iCount++;
+    } else if (a[i] === bingoArr[3]) {
+      nCount++;
+    } else if (a[i] === bingoArr[4]) {
+      oCount++;
+    }
+  }
+  if (bCount >= 1 && iCount >= 1 && nCount >= 1 && gCount >= 1 && oCount >= 1) {
+    return "WIN";
+  }
+  return "LOSE";
+}
