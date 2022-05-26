@@ -1337,4 +1337,13 @@ If there is enough space, return 0, and if there isn't, return the number of pas
 Usage Examples:
 cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
 cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+
  */
+
+function enough(cap, on, wait) {
+  let sum = cap - on - wait;
+  if (sum < 0) {
+    return (sum *= -1);
+  }
+  return 0;
+}
