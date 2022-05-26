@@ -1347,3 +1347,5 @@ function enough(cap, on, wait) {
   }
   return 0;
 }
+
+var enough = (cap, on, wait) => (cap >= on + wait ? 0 : on + wait - cap);
