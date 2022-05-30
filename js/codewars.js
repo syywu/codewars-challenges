@@ -1377,3 +1377,15 @@ For example, the string "This website is for losers LOL!" would become "Ths wbst
 
 Note: for this kata y isn't considered a vowel.
 */
+
+function disemvowel(str) {
+  let strOne = str.split("");
+  let newArr = [];
+  let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  for (let i = 0; i < strOne.length; i++) {
+    if (!vowels.includes(strOne[i])) {
+      newArr.push(strOne[i]);
+    }
+  }
+  return newArr.join("");
+}
