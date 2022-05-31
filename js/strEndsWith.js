@@ -18,3 +18,22 @@ Example:
 348597 => [7,9,5,8,4,3]
 0 => [0]
  */
+
+function solution(str, ending) {
+  if (str.endsWith(ending)) {
+    return true;
+  }
+  return false;
+}
+
+function solution(str, ending) {
+  let newstr = "";
+  let count = str.length - ending.length;
+  for (let i = count; i < str.length; i++) {
+    newstr += str[i];
+  }
+  if (newstr === ending) {
+    return true;
+  }
+  return false;
+}
