@@ -15,3 +15,20 @@
 // minSum({9,2,8,7,5,4,0,6}) ==> return (74)
 // Explanation:
 // The minimum sum obtained from summing each two integers product , 9*0 + 8*2 +7*4 +6*5 = 74
+
+function minSum(arr) {
+  // sort arr?
+  //   let sum =0
+  // slice arr into two halves
+  //   largest * the smallest and so on
+  let sum = 0;
+  arr.sort((a, b) => a - b);
+  let half = arr.length / 2;
+  let lastHalf = arr.splice(-half);
+  lastHalf.reverse();
+  let firstHalf = arr.splice(0, half);
+  for (let i = 0; i < half; i++) {
+    sum += lastHalf[i] * firstHalf[i];
+  }
+  return sum;
+}
