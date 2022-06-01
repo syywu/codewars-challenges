@@ -9,3 +9,17 @@ setAlarm(false, true) -> false
 setAlarm(false, false) -> false
 setAlarm(true, false) -> true
 */
+
+function setAlarm(employed, vacation) {
+  //   return true when employed only
+  if (
+    (employed === false && vacation === true) ||
+    (employed === true && vacation === true) ||
+    (employed === false && vacation === false)
+  ) {
+    return false;
+  }
+  return true;
+}
+
+const setAlarm = (employed, vacation) => employed && !vacation;
