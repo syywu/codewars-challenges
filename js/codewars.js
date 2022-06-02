@@ -1,43 +1,4 @@
 
-// String ends with?
-
-/*
-Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
-
-Examples:
-
-solution('abc', 'bc') // returns true
-solution('abc', 'd') // returns false
-  */
-
-/*
-Convert number to reversed array of digits
-
-Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
-
-Example:
-348597 => [7,9,5,8,4,3]
-0 => [0]
- */
-
-function solution(str, ending) {
-  if (str.endsWith(ending)) {
-    return true;
-  }
-  return false;
-}
-
-function solution(str, ending) {
-  let newstr = "";
-  let count = str.length - ending.length;
-  for (let i = count; i < str.length; i++) {
-    newstr += str[i];
-  }
-  if (newstr === ending) {
-    return true;
-  }
-  return false;
-}
 
 function digitize(n) {
   //   initialise an empty array
@@ -51,60 +12,8 @@ function digitize(n) {
   return arr;
 }
 
-/*
-  Rock Paper Scissors
 
-Let's play! You have to return which player won! In case of a draw return Draw!.
 
-Examples:
-
-rps('scissors','paper') // Player 1 won!
-rps('scissors','rock') // Player 2 won!
-rps('paper','paper') // Draw!
-  */
-
-const rps = (p1, p2) => {
-  if (
-    (p1 === "rock" && p2 === "scissors") ||
-    (p1 === "scissors" && p2 === "paper") ||
-    (p1 === "paper" && p2 === "rock")
-  ) {
-    return "Player 1 won!";
-  } else if (
-    (p2 === "rock" && p1 === "scissors") ||
-    (p2 === "scissors" && p1 === "paper") ||
-    (p2 === "paper" && p1 === "rock")
-  ) {
-    return "Player 2 won!";
-  }
-  return "Draw!";
-};
-
-/* Set Alarm
-
-Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
-
-The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
-
-setAlarm(true, true) -> false
-setAlarm(false, true) -> false
-setAlarm(false, false) -> false
-setAlarm(true, false) -> true
-*/
-
-function setAlarm(employed, vacation) {
-  //   return true when employed only
-  if (
-    (employed === false && vacation === true) ||
-    (employed === true && vacation === true) ||
-    (employed === false && vacation === false)
-  ) {
-    return false;
-  }
-  return true;
-}
-
-const setAlarm = (employed, vacation) => employed && !vacation;
 
 /*
   Double Char
