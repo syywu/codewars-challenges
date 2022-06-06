@@ -15,3 +15,16 @@ interest(100, 0.1,  1)  =  [110, 110]
 interest(100, 0.1,  2)  =  [120, 121]
 interest(100, 0.1, 10)  =  [200, 259]
 */
+
+function interest(P, r, n) {
+  //   p * r * n = inital
+  let initial = P * r * n + P;
+  //  interest = p * r
+  //   p p*r *1 = interest     interst * r
+  for (let i = 0; i < n; i++) {
+    P = P * r + P;
+  }
+  return [Math.round(initial), Math.round(P)];
+
+  // return 2 numbers in an arr
+}
