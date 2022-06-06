@@ -25,3 +25,15 @@ function DNAtoRNA(dna) {
   }
   return arr.join("");
 }
+
+function DNAtoRNA(dna) {
+  var newStr = "";
+  for (var i = 0; i < dna.length; i++) {
+    if (dna[i] == "T") {
+      newStr += "U";
+    } else {
+      newStr += dna[i];
+    }
+  }
+  return newStr;
+}
