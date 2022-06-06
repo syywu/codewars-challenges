@@ -9,3 +9,7 @@ function getAge(inputString) {
   let arr = inputString.split("");
   return Number(arr[0]);
 }
+
+function getAge(inputString) {
+  return parseInt(inputString);
+}
