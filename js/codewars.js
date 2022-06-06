@@ -13,81 +13,6 @@ function digitize(n) {
 }
 
 
-
-
-/*
-  Double Char
-
-Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
-
-Examples (Input -> Output):
-* "String"      -> "SSttrriinngg"
-* "Hello World" -> "HHeelllloo  WWoorrlldd"
-* "1234!_ "     -> "11223344!!__  "
-  
-  */
-
-function doubleChar(str) {
-  //   split str into individual letters
-  //   new str
-  //   iterate usinf for loop
-  //   push i twice to str
-  let arr = str.split("");
-  let newStr = "";
-  for (let i = 0; i < arr.length; i++) {
-    newStr += arr[i].repeat(2).toString();
-  }
-  return newStr;
-}
-
-function doubleChar(str) {
-  var word = "";
-  for (var i = 0; i < str.length; i++) {
-    word += str[i] + str[i];
-  }
-  return word;
-}
-
-/* DNA to RNA Conversion
-
-Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
-
-Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
-
-Create a function which translates a given DNA string into RNA.
-
-For example:
-
-"GCAT"  =>  "GCAU"
-The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
-
-
-*/
-
-function DNAtoRNA(dna) {
-  // create a function which returns an RNA sequence from the given DNA sequence
-  //   iterate through- pushing non 'T' to an array
-  let arr = dna.split("");
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === "T") {
-      arr.splice(i, 1, "U");
-    }
-  }
-  return arr.join("");
-}
-
-function DNAtoRNA(dna) {
-  var newStr = "";
-  for (var i = 0; i < dna.length; i++) {
-    if (dna[i] == "T") {
-      newStr += "U";
-    } else {
-      newStr += dna[i];
-    }
-  }
-  return newStr;
-}
-
 // Make negative
 
 // In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
@@ -542,36 +467,8 @@ function reverseWords(str) {
   return str.split("").reverse().join("").split(" ").reverse().join(" ");
 }
 
-/* Compound interest
 
-Compound interest is calculated by adding the interest after each time period to the amount owed, then calculating the next interest payment based on the principal PLUS the interest from all previous periods.
 
-Given a principal p, interest rate r, and a number of periods n, return an array [ total owed under simple interest, total owed under compound interest ]
-
-Notes:
-
-Round all answers to the nearest integer
-Principal will always be an integer between 0 and 9999
-interest rate will be a decimal between 0 and 1
-number of time periods will be an integer between 0 and 50
-Examples
-interest(100, 0.1,  1)  =  [110, 110]
-interest(100, 0.1,  2)  =  [120, 121]
-interest(100, 0.1, 10)  =  [200, 259]
-*/
-
-function interest(P, r, n) {
-  //   p * r * n = inital
-  let initial = P * r * n + P;
-  //  interest = p * r
-  //   p p*r *1 = interest     interst * r
-  for (let i = 0; i < n; i++) {
-    P = P * r + P;
-  }
-  return [Math.round(initial), Math.round(P)];
-
-  // return 2 numbers in an arr
-}
 
 /* Remove every elements
 
