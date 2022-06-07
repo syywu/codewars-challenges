@@ -18,3 +18,14 @@ Array's length > 2.
 
 More details here: https://en.wikipedia.org/wiki/Comma-separated_values
 */
+
+function toCsvText(array) {
+  // turn arr into str
+  //   loop through?
+  let str = "";
+  for (let i = 0; i < array.length; i++) {
+    str += array[i].join(",") + "\n";
+  }
+  str = str.slice(0, -1);
+  return str;
+}
