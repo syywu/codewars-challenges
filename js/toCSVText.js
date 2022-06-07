@@ -29,3 +29,7 @@ function toCsvText(array) {
   str = str.slice(0, -1);
   return str;
 }
+
+function toCsvText(array) {
+  return array.join("\n");
+}
