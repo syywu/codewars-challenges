@@ -22,3 +22,28 @@
 // Your task is to complete the method provided and return the number of years 'Y' as a whole in order for Mr. Scrooge to get the desired sum.
 
 // Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
+
+function calculateYears(p, i, t, d) {
+  // how long does it take for principal to get ti desired
+  //   interest is paid yearly
+  //   new sum is re-invested after paying taxes- only the years accured interest
+  //   first year = p * i * t
+  //   second = new p * i * t
+  //   count all the years until it reaches to desired
+  //   p * i = interest
+  //   interest * t = tax
+  //   interest - tax = totalInt
+  //   p + totalInt
+  if (p === d) {
+    return 0;
+  }
+  let count = 0;
+  while (p < d) {
+    let interest = p * i;
+    let tax = interest * t;
+    let total = interest - tax;
+    p += total;
+    count++;
+  }
+  return count;
+}
