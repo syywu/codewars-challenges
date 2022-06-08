@@ -16,3 +16,7 @@ function makeNegative(num) {
   }
   return num;
 }
+
+function makeNegative(num) {
+  return num <= 0 ? num : num * -1;
+}
