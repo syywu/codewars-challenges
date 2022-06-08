@@ -9,3 +9,13 @@ function removeChar(str) {
   arr.pop();
   return arr.join("");
 }
+
+function removeChar(str) {
+  var output_str = "";
+
+  for (var i = 1; i < str.length - 1; i++) {
+    output_str += str[i];
+  }
+
+  return output_str;
+}
