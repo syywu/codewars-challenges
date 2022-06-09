@@ -12,3 +12,18 @@ NOTES
 Vowels in this context refers to: a e i o u y (including upper case)
 This is indexed from [1..n] (not zero indexed!)
 */
+
+function vowelIndices(word) {
+  //   trun all words to lowercase
+  //   define vowel
+  //push i to arr
+  word = word.toLowerCase();
+  let vowels = ["a", "e", "i", "o", "u", "y"];
+  let arr = [];
+  for (let i = 0; i <= word.length; i++) {
+    if (vowels.includes(word[i])) {
+      arr.push(i + 1);
+    }
+  }
+  return arr;
+}
