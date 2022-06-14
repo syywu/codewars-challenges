@@ -9,4 +9,13 @@ Examples: (Input --> Output)
 
 [] --> []
 ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
  */
+
+var number = function (array) {
+  //your awesome code here
+  for (let i = 0; i < array.length; i++) {
+    array[i] = (i + 1).toString() + ": " + array[i];
+  }
+  return array;
+};
