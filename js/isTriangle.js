@@ -6,8 +6,5 @@ Implement a function that accepts 3 integer values a, b, c. The function should 
 */
 
 function isTriangle(a, b, c) {
-  if (a + c > b && a + b > c && b + c > a) {
-    return true;
-  }
-  return false;
+  return a + c > b && a + b > c && b + c > a;
 }
