@@ -15,5 +15,6 @@ function consecutive(arr, a, b) {
 }
 
 function consecutive(arr, a, b) {
+  // Math.abs only returns posiitve int so -1 will become 1
   return Math.abs(arr.indexOf(a) - arr.indexOf(b)) === 1;
 }
