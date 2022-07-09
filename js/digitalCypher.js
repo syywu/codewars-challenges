@@ -34,3 +34,25 @@ Encode("scout",1939);  ==>  [ 20, 12, 18, 30, 21]
 Encode("masterpiece",1939);  ==>  [ 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8]
 
 */
+
+// loop through str
+// convert letter to numerical
+// converts n to arr
+// add n[i] to str[i]
+// str.length - n.length
+// charCodeAt(0) -64 to get 1 etc
+function encode(str, n) {
+  let newArr = [];
+  let arr = [];
+  n = n.toString().split("");
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i].charCodeAt(0) - 96;
+    newArr.push(char);
+  }
+  for (let i = 0; i < newArr.length; i++) {
+    let count = 0 + (i % n.length);
+    let num = Number(newArr[i]) + Number(n[count]);
+    arr.push(num);
+  }
+  return arr;
+}
