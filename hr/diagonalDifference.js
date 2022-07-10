@@ -23,8 +23,6 @@ Input Format
 The first line contains a single integer, , the number of rows and columns in the square matrix .
 Each of the next  lines describes a row, , and consists of  space-separated integers .
 
-Constraints
-
 Output Format
 
 Return the absolute difference between the sums of the matrix's two diagonals as a single integer.
