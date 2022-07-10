@@ -68,3 +68,19 @@ Sample Output 1
 2 1
 
 */
+
+function compareTriplets(a, b) {
+  // compare two arrays- nest for loop?
+  // return [a'score, b's score]
+  let alice = 0;
+  let bob = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === b[i]) {
+    } else if (a[i] > b[i]) {
+      alice++;
+    } else {
+      bob++;
+    }
+  }
+  return [alice, bob];
+}
