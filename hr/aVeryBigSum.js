@@ -29,3 +29,12 @@ Output
 5000000015
 
 */
+
+function aVeryBigSum(ar) {
+  let sum = 0;
+  // return sum of all arr elems
+  for (let i = 0; i < ar.length; i++) {
+    sum += ar[i];
+  }
+  return sum;
+}
