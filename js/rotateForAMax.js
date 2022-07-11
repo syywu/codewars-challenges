@@ -26,3 +26,17 @@ max_rot(38458215) should return 85821534
 
 
 */
+
+function maxRot(n) {
+  let highest = n;
+  let arr = n.toString().split("");
+  for (let i = 0; i < arr.length; i++) {
+    let rmv = arr.splice(i, 1);
+    arr.push(rmv);
+    let num = Number(arr.join(""));
+    if (num > highest) {
+      highest = num;
+    }
+  }
+  return highest;
+}
