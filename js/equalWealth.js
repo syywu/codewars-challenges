@@ -26,3 +26,15 @@ Wealth of a citizen will be an integer with minimum equal to 0 (negative wealth 
 Handling of floating point error will not be tested
 
 */
+
+function redistributeWealth(wealth) {
+  // add all elems together and divide by arr.length
+  let sum = 0;
+  for (let i = 0; i < wealth.length; i++) {
+    sum += wealth[i];
+  }
+  let div = sum / wealth.length;
+  for (let i = 0; i < wealth.length; i++) {
+    wealth[i] = div;
+  }
+}
