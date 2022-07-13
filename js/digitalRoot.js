@@ -29,13 +29,10 @@ function digital_root(n) {
 }
 
 function digital_root(n) {
-  if (n < 10) {
-    return n;
-  }
-  let sum = 0;
-  let arr = n.toString().split("");
-  for (let i = 0; i < arr.length; i++) {
-    sum += Number(arr[i]);
-    return sum;
-  }
+  if (n < 10) return n;
+
+  for (let sum = 0, i = 0, n = String(n); i < n.length; i++)
+    sum += Number(n[i]);
+
+  return digital_root(sum);
 }
