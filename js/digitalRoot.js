@@ -27,3 +27,15 @@ function digital_root(n) {
   }
   return x;
 }
+
+function digital_root(n) {
+  if (n < 10) {
+    return n;
+  }
+  let sum = 0;
+  let arr = n.toString().split("");
+  for (let i = 0; i < arr.length; i++) {
+    sum += Number(arr[i]);
+    return sum;
+  }
+}
