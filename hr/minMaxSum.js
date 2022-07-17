@@ -35,3 +35,19 @@ Sample Output
 
 10 14
 */
+
+function miniMaxSum(arr) {
+  // sort array
+  // min = all numbers - last
+  // max = all number - first
+  let min = 0;
+  let max = 0;
+  arr.sort((a, b) => a - b);
+  for (let i = 0; i < arr.length - 1; i++) {
+    min += arr[i];
+  }
+  for (let i = 1; i < arr.length; i++) {
+    max += arr[i];
+  }
+  process.stdout.write(`${min} ${max}`);
+}
