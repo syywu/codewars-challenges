@@ -49,3 +49,28 @@ Sample Output
 0.166667
 
 */
+
+function plusMinus(arr) {
+  // keep track of pos, neg, 0- map ?switch
+  // convert fractions into decimals- count/ arr.length
+  let p = 0;
+  let n = 0;
+  let z = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      p++;
+    } else if (arr[i] < 0) {
+      n++;
+    } else {
+      z++;
+    }
+  }
+  let pf = p / arr.length;
+  let nf = n / arr.length;
+  let zf = z / arr.length;
+  process.stdout.write(pf.toFixed(6));
+  process.stdout.write("\n");
+  process.stdout.write(nf.toFixed(6));
+  process.stdout.write("\n");
+  process.stdout.write(zf.toFixed(6));
+}
