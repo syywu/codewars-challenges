@@ -8,3 +8,14 @@ Examples:(Input1, Input2 --> Output (explanation)))
 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 */
+
+function addBinary(a, b) {
+  // add numbers
+  // var c
+  let c = a + b;
+  // remainder when divide by 2
+  if (c % 2 === 0) {
+    return "1";
+  }
+  return "0";
+}
