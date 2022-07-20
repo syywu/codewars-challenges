@@ -10,34 +10,6 @@ function digitize(n) {
   return arr;
 }
 
-/* highest and lowest
-
-In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
-
-Examples
-highAndLow("1 2 3 4 5");  // return "5 1"
-highAndLow("1 2 -3 4 5"); // return "5 -3"
-highAndLow("1 9 3 4 -5"); // return "9 -5"
-Notes
-All numbers are valid Int32, no need to validate them.
-There will always be at least one number in the input string.
-Output string must be two numbers separated by a single space, and highest number is first.
- 
-*/
-
-function highAndLow(numbers) {
-  // convert str to arr
-  //   arr.sort the arr
-  //   select [o] and [arr.length-1]
-  //   converts back to str
-  let newArr = [];
-  let arr = numbers.split(" ");
-  let sortArr = arr.sort((a, b) => a - b);
-  newArr.push(arr[0], arr[arr.length - 1]);
-
-  return newArr.reverse().join(" ");
-}
-
 /* Grade book
 
 Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
