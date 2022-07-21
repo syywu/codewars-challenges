@@ -13,3 +13,16 @@ Examples:
 [4, 6, 9, 1, 3]  -->  [5, 8, 2, 5, 8]  #  [4+1, 6+2, 9+3, 1+4, 3+5]
                                        #  9+3 = 12  -->  2
  */
+
+function incrementer(nums) {
+  let newArr = [];
+  for (let i = 0; i < nums.length; i++) {
+    let res = nums[i] + i + 1;
+    if (res > 9) {
+      res = res % 10;
+    }
+    newArr.push(res);
+  }
+
+  return newArr;
+}
