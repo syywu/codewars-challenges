@@ -29,3 +29,13 @@ Sample Output 0
 
 2
 */
+
+function birthdayCakeCandles(candles) {
+  // sort array
+  // while arr[i] ===
+  // count++
+  let newArr = candles.sort((a, b) => b - a);
+  let biggest = newArr[0];
+  let arr = candles.filter((candle) => candle === biggest);
+  return arr.length;
+}
