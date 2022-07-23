@@ -47,3 +47,23 @@ Sample Output
 ######
 
 */
+
+function staircase(n) {
+  // for loop to end at n
+  // first line = 1# and n -1
+  // initialise a str to return str
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    let hash = i + 1;
+    let spaces = n - i - 1;
+
+    for (let j = 0; j < spaces; j++) {
+      str += " ";
+    }
+    for (let j = 0; j < hash; j++) {
+      str += "#";
+    }
+    str += "\n";
+  }
+  process.stdout.write(str);
+}
