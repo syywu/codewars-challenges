@@ -12,3 +12,24 @@ Examples (a, b) --> output (explanation)
 (-1, 0) --> -1 (-1 + 0 = -1)
 (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 */
+
+function getSum(a, b) {
+  // if a == b return a
+  //   initialise sum = 0
+  //  find all numbers between a and b
+  //   for i = a i <=b
+  //   sum += i
+  if (a == b) return a;
+  let sum = 0;
+  //   find which is smaller= strt with smallest
+  let big = b;
+  let small = a;
+  if (b < a) {
+    small = b;
+    big = a;
+  }
+  for (let i = small; i <= big; i++) {
+    sum += i;
+  }
+  return sum;
+}
